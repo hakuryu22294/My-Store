@@ -13,13 +13,22 @@ import {
   Login,
 } from "./pages";
 
+import { ErrorElement } from "./components";
+
+import { loader as landingLoader } from "./pages/Landing";
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
     errorElement: <Error />,
     children: [
-      { index: true, element: <Landing />, errorElement: <Error /> },
+      {
+        index: true,
+        element: <Landing />,
+        errorElement: <ErrorElement />,
+        loader: landingLoader,
+      },
       { path: "products", element: <Products /> },
       {
         path: "products/:id",
