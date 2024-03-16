@@ -10,3 +10,4 @@ export { default as FeaturedProducts } from "./FeaturedProducts";
 export { default as PaginnationContainer } from "./PaginnationContainer";
 export { default as Filter } from "./Filter";
 export { default as ProductsContainer } from "./ProductsContainer";
+export { default as Loading } from "./Loading";
